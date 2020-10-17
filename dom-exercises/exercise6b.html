@@ -35,18 +35,28 @@
             font-size: 0.9em;
             color: #a9a9a9;
         }
+        div.text{
+            display:none;
+        }
     </style>
     <script>
-        /* TODO this is for you to complete */
+ function myFunction() {
+  var x = document.getElementById('text');
+  if (x.style.visibility === 'hidden') {
+    x.style.visibility = 'visible';
+  } else {
+    x.style.visibility = 'hidden';
+  }
+}
     </script>
 </head>
 <body>
 
 <article>
     <h2>What is lorem ipsum?</h2>
-    <div class="showlink"><a href="#">Show</a></div>
-    <div class="text">
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+    <div class="showlink" id="show"><a href="#" id="href" onclick=myFunction()>Show</a></div>
+    <div class="text" id="text">
+        <p id="para">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
             industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
             scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
             electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of

@@ -17,3 +17,10 @@ function initGrid() {
 window.onload = function () {
     initGrid();
 }
+function changeSize(n) {
+    var p = document.getElementById('text');
+     p.style.fontSize = n.value + 'px'
+}
+    function changeFont(font) {
+     document.getElementById("text").style.fontFamily = font.value;
+}

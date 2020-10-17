@@ -14,7 +14,29 @@
         }
     </style>
     <script>
-        /* TODO complete this part */
+       function compare() {
+var todo = document.getElementById("password1").value;
+  var todo2 = document.getElementById("password2").value;
+
+  if(todo != todo2) {
+    alert("Yours passwords do not match");
+  } else {
+    if(todo == todo2) {
+    alert("Your Registration was successfull");
+    setTimeout(function () {
+    window.location.href = "login.html"; 
+    }, 1000);
+}
+}
+       }
+function minLength() { 
+            var x = document.getElementById( 
+                        "password1").minLength; 
+  
+            document.getElementById( 
+                    "demo").innerHTML = x; 
+        }  
+
     </script>
 </head>
 <body>
@@ -23,21 +45,24 @@
     <table>
         <tr>
             <td>Password (min 6 characters):</td>
-            <td><input type="password" name="password1" id="password1" size="10" placeholder="Password"></td>
+            <td><input type="password" name="password1" id="password1" size="10" placeholder="Password" minlength="6"></td>
             <td>
                 <div id="pw1_check" class="err"></div>
             </td>
         </tr>
         <tr>
             <td>Repeat password:</td>
-            <td><input type="password" name="password2" id="password2" size="10" placeholder="Password"></td>
+            <td><input type="password" name="password2" id="password2" size="10" placeholder="Password" minlength="6"></td>
             <td>
                 <div id="pw2_check" class="err"></div>
             </td>
         </tr>
     </table>
 
-    <input type="submit" value="Submit" id="submitBtn"/>
+    <input type="submit" value="Submit"  onclick=compare() id="submitBtn"/>
+    <p id="demo" style= 
+        "color:green;font-size:25px;"> 
+    </p> 
 </form>
 
 </body>

@@ -11,10 +11,26 @@
         }
     </style>
     <script>
-        /* TODO: write JS code here */
+        function changecolor() {
+        
+        
+         var id = document.getElementById("mydiv");
+         
+         if (id.style.backgroundColor=="blue"){
+             id.style.backgroundColor="red";
+         }
+         else if (id.style.backgroundColor=="red"){
+             id.style.backgroundColor="green";
+            }
+         else if (id.style.backgroundColor=="green"){
+             id.style.backgroundColor="blue";
+         }
+
+        };
     </script>
 </head>
 <body>
-<div id="mydiv"></div>
+<div id="mydiv" onclick="changecolor()" style="background-color:blue;"></div>
+
 </body>
 </html>

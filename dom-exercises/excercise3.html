@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+</head>
+<style>
+     #mydiv {
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+        }
+</style>
+
+<body>
+   
+    
+    <div id="mydiv" onclick="changecolors()" >  click here to change the color</div>
+    <script>
+       
+    
+    function changecolors(){
+        var colors = ["Blue ", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow "];
+    
+              // selecting random color 
+              var random_color = colors[Math.floor( 
+                    Math.random() * colors.length)]; 
+              
+            var x = document.getElementById('mydiv'); 
+            x.style.background = random_color; 
+        }  
+    </script>  
+</body>
+</html>
+  
+   
+

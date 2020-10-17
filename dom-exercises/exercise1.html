@@ -16,7 +16,27 @@
         }
     </style>
 </head>
-<body>
-<div id="mydiv">Hello world</div>
+<script type=text/javascript>
+    function changetext()
+    {
+    var textchange2 = "Can I help you" ;
+    var id = document.getElementById("mydiv");
+    id.innerHTML=textchange2;
+    }
+    function resetchange()
+    {
+    var textchange3 = "Hello world" ;
+    var id = document.getElementById("mydiv");
+    id.innerHTML=textchange3;
+    }
+
+
+
+
+
+    </script>
+    <div id="mydiv" onmouseover="changetext();" onmouseout="resetchange();">Hello world</div>
+
 </body>
 </html>
+
